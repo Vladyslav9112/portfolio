@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="w-[1280px] flex justify-between text-white mb-10">
+    <section className="w-[1280px] flex justify-between text-white mb-20">
       <div className="flex flex-col justify-center">
         <h1 className="mb-9">VLAD KRYKLYVETS</h1>
         <p className="mb-20 w-[461px]">

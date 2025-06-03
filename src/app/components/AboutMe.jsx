@@ -1,6 +1,6 @@
 export default function AboutMe() {
   return (
-    <section className="bg-custom-gradient rounded-[15px] w-[1280px] p-6 text-white">
+    <section className="bg-custom-gradient rounded-[15px] w-[1280px] p-6 text-white mb-10">
       <h3 className="mb-6">About Me</h3>
       <p>
         I’m a Front-End Developer passionate about creating responsive,

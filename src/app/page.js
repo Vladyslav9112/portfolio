@@ -5,6 +5,8 @@ import HeroSection from "./components/HeroSection";
 import AboutMe from "./components/AboutMe";
 import ResumeDetails from "./components/ResumeDetails";
 import Experience from "./components/Experience";
+import TechnicalSkills from "./components/TechnicalSkills";
+import Freelance from "./components/Freelance";
 
 export default function Home() {
   return (
@@ -15,6 +17,8 @@ export default function Home() {
         <AboutMe />
         <ResumeDetails />
         <Experience />
+        <Freelance />
+        <TechnicalSkills />
       </ContentWrapper>
     </>
   );

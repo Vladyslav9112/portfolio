@@ -7,6 +7,9 @@ import ResumeDetails from "./components/ResumeDetails";
 import Experience from "./components/Experience";
 import TechnicalSkills from "./components/TechnicalSkills";
 import Freelance from "./components/Freelance";
+import MyProjects from "./components/MyProjects";
+import Messages from "./components/Messages";
+import Contacts from "./components/Contacts";
 
 export default function Home() {
   return (
@@ -19,6 +22,9 @@ export default function Home() {
         <Experience />
         <Freelance />
         <TechnicalSkills />
+        <MyProjects />
+        <Messages />
+        <Contacts />
       </ContentWrapper>
     </>
   );

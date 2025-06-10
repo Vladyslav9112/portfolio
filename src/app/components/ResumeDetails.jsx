@@ -1,7 +1,7 @@
 export default function ResumeDetails() {
   return (
     <section className="mb-10 text-white flex">
-      <div className="bg-custom-gradient w-[620px] h-[240px] rounded-[15px] p-5 mr-10">
+      <div className="bg-custom-gradient w-[620px] h-[240px] rounded-[15px] p-5 mr-10 hover:shadow-[0_0_15px_rgba(255,255,255,0.6)] transition duration-200">
         <h4 className="mb-2">Education</h4>
         <ul className="list-disc list-inside">
           <li>
@@ -9,7 +9,7 @@ export default function ResumeDetails() {
           </li>
         </ul>
       </div>
-      <div className="bg-custom-gradient w-[620px] h-[240px] rounded-[15px] p-5">
+      <div className="bg-custom-gradient w-[620px] h-[240px] rounded-[15px] p-5 hover:shadow-[0_0_15px_rgba(255,255,255,0.6)] transition duration-200">
         <h4 className="mb-2">Languages</h4>
         <ul className="list-disc list-inside pl-2 marker:text-sm marker:text-gray-400">
           <li>Ukrainian — Native speaker</li>

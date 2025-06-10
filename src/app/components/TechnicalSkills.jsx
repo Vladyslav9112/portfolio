@@ -22,7 +22,7 @@ export default function TechnicalSkills() {
       {skills.map((skill) => (
         <div
           key={skill.name}
-          className="w-[162px] h-[162px] bg-[#1E1E1E] rounded-2xl shadow-md flex flex-col items-center justify-center transition-transform hover:scale-105"
+          className="w-[162px] h-[162px] bg-[#1E1E1E] rounded-2xl shadow-md flex flex-col items-center justify-center transition-transform duration-200 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,255,255,0.6)]"
         >
           <Image
             src={skill.icon}

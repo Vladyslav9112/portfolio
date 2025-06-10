@@ -47,7 +47,7 @@ export default function MyProjects() {
   return (
     <section className="mb-10" id="projects">
       <h3 className="text-white mb-5">My Projects</h3>
-      <div className="bg-[#1E1E1E] rounded-2xl p-5">
+      <div className="bg-[#1E1E1E] rounded-2xl p-5 hover:shadow-[0_0_15px_rgba(255,255,255,0.6)] transition duration-200">
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={20}
@@ -79,11 +79,11 @@ export default function MyProjects() {
                       alt="GitHub icon"
                       width={25}
                       height={25}
-                      className="hover:scale-125 transition-transform"
+                      className="hover:scale-125 transition-transform duration-200"
                     />
                   </Link>
                   <Link href={project.demo} target="_blank">
-                    <LinkIcon className="w-[25px] h-[25px] text-white hover:scale-125" />
+                    <LinkIcon className="w-[25px] h-[25px] text-white hover:scale-125 transition duration-200" />
                   </Link>
                 </div>
               </div>

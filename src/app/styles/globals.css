@@ -16,13 +16,13 @@
     @apply w-9 h-9 text-white flex items-center justify-center transition duration-300 ease-in-out;
     width: 36px !important;
     height: 36px !important;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(51, 45, 45, 0.6);
     border-radius: 50% !important;
   }
 
   .swiper-button-next:hover,
   .swiper-button-prev:hover {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(51, 45, 45, 0.8);
     transform: scale(1.1);
   }
 

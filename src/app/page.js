@@ -10,6 +10,7 @@ import Freelance from "./components/Freelance";
 import MyProjects from "./components/MyProjects";
 import Messages from "./components/Messages";
 import Contacts from "./components/Contacts";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
         <MyProjects />
         <Messages />
         <Contacts />
+        <Footer />
       </ContentWrapper>
     </>
   );

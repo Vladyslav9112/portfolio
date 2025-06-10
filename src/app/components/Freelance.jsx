@@ -1,6 +1,6 @@
 export default function Freelance() {
   return (
-    <section className="w-[1280px] h-auto p-5 text-white bg-custom-gradient rounded-[15px] mb-10">
+    <section className="w-[1280px] h-auto p-5 text-white bg-custom-gradient rounded-[15px] mb-10 hover:shadow-[0_0_15px_rgba(255,255,255,0.6)] transition duration-200">
       <div>
         <h4 className="mb-4 text-bold">Freelance Front-End Developer</h4>
         <ul className="list-disc pl-5 text-white text-sm space-y-1 mb-3">

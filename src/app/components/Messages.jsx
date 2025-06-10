@@ -25,11 +25,11 @@ export default function Messages() {
             name="message"
             placeholder="Enter your message"
             required
-            className="mb-2 bg-custom-gradient p-2 rounded h-[100px]"
+            className="mb-2 bg-custom-gradient p-2 rounded min-h-[75px] h-[100px]"
           ></textarea>
           <button
             type="submit"
-            className="bg-custom-gradient rounded p-2 h-[50px]"
+            className="bg-custom-gradient rounded p-2 h-[50px] hover:shadow-[0_0_15px_rgba(255,255,255,0.6)] hover:scale-102 transition duration-200 cursor-pointer"
           >
             Send me message
           </button>

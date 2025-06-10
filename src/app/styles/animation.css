@@ -1,7 +1,16 @@
-.header-scale {
-  transition: transform 0.3s ease;
+@import "tailwindcss";
 
-  &:hover {
-    transform: scale(1.05);
+@layer utilities {
+  .lineUnderText {
+    @apply relative text-current;
+  }
+
+  .lineUnderText::after {
+    content: "";
+    @apply absolute left-0 bottom-0 h-0.5 bg-current w-0 transition-all duration-300;
+  }
+
+  .lineUnderText:hover::after {
+    @apply w-full;
   }
 }

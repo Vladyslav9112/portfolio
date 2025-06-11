@@ -1,33 +1,66 @@
+"use client";
+import { useState } from "react";
 import ContentWrapper from "./global/ContentWrapper";
-import animation from "../styles/animation.css";
+import { Menu, X } from "lucide-react";
+import "../styles/animation.css";
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
+
   return (
-    <section
-      className="w-[1280px] bg-custom-gradient rounded-[100px] mt-10 h-20 flex items-center justify-between text-white px-6 mb-20"
-      id="home"
-    >
-      <a
-        href="https://drive.google.com/file/d/1PzA30Nk7wqVgQpLwaYO5vCiYvMqs4Dhs/view?usp=sharing"
-        target="_blank"
-        className="bg-black shadow-[0_4px_4px_rgba(0,0,0,0.25)] rounded-[100px] w-[257px] h-[45px] flex justify-center items-center hover:shadow-[0_0_15px_rgba(255,255,255,0.6)] hover:scale-105 transition duration-200"
-      >
-        <p>VIEW RESUME</p>
-      </a>
-      <nav className="gap-15 ">
-        <a href="#home" className="mr-15 lineUnderText">
-          Home
+    <header className="z-50 scroll-auto sticky top-0">
+      <section className="bg-custom-gradient rounded-[100px] mt-10 h-20 flex items-center justify-between text-white px-6 mb-20">
+        <a
+          href="https://drive.google.com/file/d/1PzA30Nk7wqVgQpLwaYO5vCiYvMqs4Dhs/view?usp=sharing"
+          target="_blank"
+          className="bg-black shadow-[0_4px_4px_rgba(0,0,0,0.25)] rounded-[100px] w-[180px] lg:w-[257px] h-[45px] flex justify-center items-center hover:shadow-[0_0_15px_rgba(255,255,255,0.6)] hover:scale-105 transition duration-200"
+        >
+          <p>VIEW RESUME</p>
         </a>
-        <a href="#about" className="mr-15 lineUnderText">
-          About
-        </a>
-        <a href="#projects" className="mr-15 lineUnderText">
-          Projects
-        </a>
-        <a href="#contacts" className="mr-15 lineUnderText">
-          Contacts
-        </a>
-      </nav>
-    </section>
+
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex">
+          {["home", "about", "projects", "contacts"].map((id) => (
+            <a
+              key={id}
+              href={`#${id}`}
+              className="mr-10 lg:mr-15 lineUnderText capitalize"
+            >
+              {id}
+            </a>
+          ))}
+        </nav>
+
+        {/* Burger Icon */}
+        <button
+          className="md:hidden text-white z-50"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <X size={32} /> : <Menu size={32} />}
+        </button>
+      </section>
+
+      {/* Mobile Menu Overlay */}
+      {menuOpen && (
+        <div className="fixed inset-0 bg-opacity-60 backdrop-blur-md flex justify-center items-center transition-all duration-300">
+          <nav className="flex flex-col space-y-6 text-white text-2xl text-center">
+            {["home", "about", "projects", "contacts"].map((id) => (
+              <a
+                key={id}
+                href={`#${id}`}
+                onClick={handleLinkClick}
+                className="hover:underline"
+              >
+                {id.charAt(0).toUpperCase() + id.slice(1)}
+              </a>
+            ))}
+          </nav>
+        </div>
+      )}
+    </header>
   );
 }

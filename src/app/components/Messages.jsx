@@ -1,25 +1,31 @@
 export default function Messages() {
   return (
     <section className=" flex justify-center items-center mb-10" id="message">
-      <div className="bg-[#1E1E1E] p-5 rounded-2xl text-white w-[600px]">
+      <div className="bg-[#1E1E1E] p-5 rounded-2xl text-white w-[620px]">
         <h3 className="mb-15 text-center">Send me a message</h3>
-        <form id="contactForm" className="flex flex-col gap-4">
-          <p>Name:</p>
-          <input
-            type="text"
-            name="name"
-            placeholder="Enter your name"
-            required
-            className="mb-2 bg-custom-gradient p-2 rounded"
-          />
-          <p>Email:</p>
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            required
-            className="mb-2 bg-custom-gradient p-2 rounded"
-          />
+        <form
+          action="https://formspree.io/f/xblygake"
+          method="POST"
+          className="flex flex-col gap-4"
+        >
+          <div className="">
+            <p>Name:</p>
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              required
+              className="mb-2 bg-custom-gradient p-2 rounded w-full"
+            />
+            <p>Email:</p>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+              className="mb-2 bg-custom-gradient p-2 rounded w-full"
+            />
+          </div>
           <p>Message:</p>
           <textarea
             name="message"

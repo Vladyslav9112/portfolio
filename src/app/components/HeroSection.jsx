@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="w-[1280px] flex justify-between text-white mb-20">
-      <div className="flex flex-col justify-center">
+    <section className="flex flex-col lg:flex-row justify-between items-center text-white mb-20">
+      <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-start mb-5 lg:mb-0">
         <h1 className="mb-9">VLAD KRYKLYVETS</h1>
-        <p className="mb-20 w-[461px]">
+        <p className="mb-20 max-w-[461px]">
           I am from Ukraine, Poltava. I have experience in developing dynamic
           web projects with adaptive layout
         </p>
@@ -15,7 +15,7 @@ export default function HeroSection() {
         >
           Hire Me
         </a>
-        <div className="flex gap-[89px]">
+        <div className="flex gap-10 md:gap-[89px]">
           <a href="https://github.com/Vladyslav9112" target="_blank">
             <Image
               src="/icons/github.svg"
@@ -48,7 +48,7 @@ export default function HeroSection() {
           </a>
         </div>
       </div>
-      <div className="relative w-[552px] h-[551px] rounded-full">
+      <div className="relative max-w-[552px] max-h-[551px] sm:rounded-full rounded-15px items">
         <div className="absolute -inset-4 rounded-full bg-[linear-gradient(180deg,#363636_5%,#5a5a5a_115%)] opacity-70 blur-[18px]"></div>
         <Image
           src="/Me.jpg"
@@ -56,7 +56,7 @@ export default function HeroSection() {
           width={551}
           height={551}
           priority
-          className="relative w-full h-full rounded-full object-cover"
+          className="w-[551px] max-h-[551px] relative rounded-full object-cover"
         />
       </div>
     </section>

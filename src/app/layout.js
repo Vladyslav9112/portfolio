@@ -6,7 +6,22 @@ import ClientLayout from "./ClientLoyout"; // 👈 Імпорт клієнтсь
 export const metadata = {
   title: "PORTFOLIO: Vlad Kryklyvets",
   description:
-    "Personal portfolio showcasing projects, skills, and experience.",
+    "Front-End Developer from Ukraine. Portfolio with projects, skills, and contact info.",
+  keywords: [
+    "Vlad Kryklyvets",
+    "Front-End Developer",
+    "portfolio",
+    "React",
+    "Next.js",
+  ],
+  authors: [
+    {
+      name: "Vlad Kryklyvets",
+      url: "https://portfolio-omega-gilt-20.vercel.app",
+    },
+  ],
+  creator: "Vlad Kryklyvets",
+  robots: "index, follow",
   icons: {
     icon: "/icons/favicon.ico",
   },

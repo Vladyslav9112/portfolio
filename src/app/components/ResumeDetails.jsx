@@ -12,8 +12,8 @@ export default function ResumeDetails() {
       <div className="bg-custom-gradient w-full md:w-[620px] h-[240px] rounded-[15px] p-5 hover:shadow-[0_0_15px_rgba(255,255,255,0.6)] transition duration-200 ">
         <h4 className="mb-2 font-bold-25">Languages</h4>
         <ul className="list-disc list-inside pl-2 marker:text-sm marker:text-gray-400">
-          <li>Ukrainian — Native speaker</li>
-          <li>English — A1–A2</li>
+          <li>Ukrainian</li>
+          <li>English</li>
         </ul>
       </div>
     </section>

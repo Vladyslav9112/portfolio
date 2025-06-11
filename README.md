@@ -1,61 +1,53 @@
-Так! Дякую, що надіслав повний код стилів і root-компонент. Це дозволяє доповнити `README.md` ще кількома цінними речами — щоб краще передати цінність і унікальність твого проєкту.
-
----
-
-Ось **оновлений і завершений варіант `README.md`**, із додатковими деталями на основі твоїх останніх файлів:
-
----
-
-````markdown
 # 🧑‍💻 Personal Portfolio — Vlad Kryklyvets
 
-Мій персональний сайт-портфоліо, побудований з використанням **Next.js 15**, **React 19** та **Tailwind CSS 4**, з повною адаптивністю, анімацією при скролі та кастомною візуальною стилізацією.
+This is my personal portfolio website built using **Next.js 15**, **React 19**, and **Tailwind CSS 4**. It features full responsiveness, scroll-triggered animations, and custom visual styling to showcase my experience, projects, and skills as a front-end developer.
 
 ## 🌐 Live Demo
 
-👉 [Переглянути онлайн](https://portfolio-omega-gilt-20.vercel.app/)
+👉 [View Online](https://portfolio-omega-gilt-20.vercel.app/)
 
 ---
 
-## 🧩 Особливості
+## 🧩 Features
 
-- 🎨 Анімована Glow Background система
-- 🧭 Sticky Header з адаптивною навігацією
-- 🖼️ Галерея проєктів на основі `Swiper.js`
-- ✨ Анімації при скролі за допомогою `framer-motion` та `react-intersection-observer`
-- 📬 Контактна форма через **Formspree**
-- 🌙 Темний стиль дизайну з кастомними gradient'ами
-- 🔤 Повністю кастомна типографіка на основі **Inter** (Google Fonts)
-
----
-
-## 🛠️ Стек технологій
-
-| Технологія               | Використання                |
-| ------------------------ | --------------------------- |
-| **Next.js 15**           | Фреймворк для React         |
-| **React 19**             | UI бібліотека               |
-| **Tailwind CSS 4**       | Утилітарна CSS-стилізація   |
-| **Framer Motion**        | Анімації при скролі, ефекти |
-| **Swiper.js**            | Слайдер проектів            |
-| **Lucide React**         | SVG-іконки                  |
-| **Formspree**            | Обробка форм повідомлень    |
-| **Google Fonts (Inter)** | Кастомна типографіка        |
-| **Docker/GraphQL**       | досвід із реальної роботи   |
+- 🎨 Animated Glow Background System
+- 🧭 Sticky Header with Responsive Navigation
+- 🖼️ Project Gallery powered by `Swiper.js`
+- ✨ Scroll-triggered animations using `framer-motion` and `react-intersection-observer`
+- 📬 Contact Form with **Formspree** integration
+- 🌙 Dark Mode UI with Custom Gradients
+- 🔤 Fully Customized Typography with **Inter** (Google Fonts)
+- 🧠 **SEO-optimized metadata** (title, description, keywords) for better discoverability in search engines
 
 ---
 
-## 📁 Структура
+## 🛠️ Tech Stack
 
-- `/components` — усі модульні блоки: `HeroSection`, `AboutMe`, `Experience`, `Projects` тощо
-- `/styles` — стилі: кастомні utility класи Tailwind, glow animation, типографіка
-- `/public` — іконки, фото, зображення проєктів
-- `/app` — `RootLayout.tsx` і `page.tsx` з динамічною побудовою сторінки
-- `/MyProjects/` — зображення для слайдера
+| Technology               | Purpose                            |
+| ------------------------ | ---------------------------------- |
+| **Next.js 15**           | React Framework                    |
+| **React 19**             | UI Library                         |
+| **Tailwind CSS 4**       | Utility-first CSS Framework        |
+| **Framer Motion**        | Animations on Scroll               |
+| **Swiper.js**            | Project Carousel/Slider            |
+| **Lucide React**         | Icon Library                       |
+| **Formspree**            | Form submission handling           |
+| **Google Fonts (Inter)** | Custom typography integration      |
+| **Docker / GraphQL**     | Real-world experience technologies |
 
 ---
 
-## 🚀 Встановлення проєкту локально
+## 📁 Project Structure
+
+- `/components` — Reusable UI sections like `HeroSection`, `AboutMe`, `Projects`, etc.
+- `/styles` — Global styles, Tailwind utility classes, animations, fonts
+- `/public` — Icons, profile images, project thumbnails
+- `/app` — App routing and layout (`RootLayout.tsx`, `page.tsx`)
+- `/MyProjects/` — Static project preview images
+
+---
+
+## 🚀 Getting Started Locally
 
 ```bash
 git clone https://github.com/Vladyslav9112/portfolio.git
@@ -63,11 +55,22 @@ cd portfolio
 npm install
 npm run dev
 ```
-````
+
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## 📫 Контакт
+## 🔍 SEO & Metadata
+
+This portfolio uses **Next.js metadata configuration** to improve search engine visibility. Implemented meta tags include:
+
+- `title`, `description`, `keywords`
+- `author`, `creator`, and `robots` directives
+- `favicon` icon support
+
+---
+
+## 📫 Contact
 
 - Email: [vlad.kryklyvets9@gmail.com](mailto:vlad.kryklyvets9@gmail.com)
 - Telegram: [@kkryklyvets](https://t.me/kkryklyvets)

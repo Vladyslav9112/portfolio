@@ -6,7 +6,7 @@ import ClientLayout from "./ClientLoyout"; // 👈 Імпорт клієнтсь
 export const metadata = {
   title: "PORTFOLIO: Vlad Kryklyvets",
   description:
-    "Front-End Developer from Ukraine. Portfolio with projects, skills, and contact info.",
+    "Vlad Kryklyvets - Front-End Developer from Ukraine. Portfolio with projects, skills, and contact info.",
   keywords: [
     "Vlad Kryklyvets",
     "Front-End Developer",
@@ -30,7 +30,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-black text-white relative min-h-screen overflow-x-hidden">
+      <body className="bg-black text-white relative min-h-screen overflow-x-hidden ">
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>

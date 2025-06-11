@@ -7,7 +7,7 @@ export default function HeroSection() {
         <h1 className="mb-9 font-bold-30">VLAD KRYKLYVETS</h1>
         <p className="mb-20 max-w-[461px]">
           I am from Ukraine, Poltava. I have experience in developing dynamic
-          web projects with adaptive layout
+          web projects with adaptive layout.
         </p>
         <a
           href="#message"

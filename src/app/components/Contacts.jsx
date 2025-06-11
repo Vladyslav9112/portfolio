@@ -9,7 +9,6 @@ export default function Contacts() {
     >
       <h3 className="font-bold-25 text-center mb-10">Contacts:</h3>
       <div className="flex flex-col md:flex-row items-center justify-center gap-6 lg:gap-0">
-        {/* Блок з іконками */}
         <div className="flex gap-10 lg:gap-15 mr-0 lg:mr-15">
           <a href="https://github.com/Vladyslav9112" target="_blank">
             <Image
@@ -43,7 +42,6 @@ export default function Contacts() {
           </a>
         </div>
 
-        {/* Блок з поштою і телефоном */}
         <div className="flex flex-col sm:flex-row items-center gap-6 lg:gap-15">
           <a
             href="mailto:vlad.kryklyvets9@gmail.com"

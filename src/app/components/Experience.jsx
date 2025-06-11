@@ -4,7 +4,7 @@ export default function Experience() {
   return (
     <section className=" h-auto p-5  bg-custom-gradient rounded-[15px] mb-10 hover:shadow-[0_0_15px_rgba(255,255,255,0.6)] transition duration-200 font-regular-16">
       <h3 className="mb-6 font-bold-25">Experience</h3>
-      <div className="md:flex gap-5 w-[620]">
+      <div className="md:flex gap-5">
         <Image
           src="/icons/logoSoftUa.svg"
           alt="Logo Soft Ua"

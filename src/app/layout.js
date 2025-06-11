@@ -14,14 +14,13 @@ export default function RootLayout({ children }) {
 
     const screenWidth = window.innerWidth;
 
-    // Кількість бліків залежно від ширини
     let numGlows = 20;
     if (screenWidth < 640) {
       numGlows = 5;
     } else if (screenWidth < 768) {
-      numGlows = 7 + Math.floor(Math.random() * 4); // 7-10
+      numGlows = 7 + Math.floor(Math.random() * 4);
     } else if (screenWidth < 1024) {
-      numGlows = 10 + Math.floor(Math.random() * 6); // 10-15
+      numGlows = 10 + Math.floor(Math.random() * 6);
     }
 
     for (let i = 0; i < numGlows; i++) {
@@ -35,11 +34,10 @@ export default function RootLayout({ children }) {
       glow.style.width = `${size}px`;
       glow.style.height = `${size}px`;
 
-      const duration = 2 + Math.random() * 3; // повернута швидкість 5–10 сек
+      const duration = 2 + Math.random() * 3;
       const delay = Math.random() * duration;
 
-      // обмеження руху, щоб не було горизонтального скролу
-      const moveX = (Math.random() - 0.5) * 40; // замість 80vw -> 40vw
+      const moveX = (Math.random() - 0.5) * 40;
       const moveY = (Math.random() - 0.5) * 80;
 
       glow.style.setProperty("--move-x", `${moveX}vw`);

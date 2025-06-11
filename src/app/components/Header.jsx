@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <header className="z-50 scroll-auto sticky top-0">
-      <section className="bg-custom-gradient rounded-[100px] mt-10 h-20 flex items-center justify-between text-white px-6 mb-20">
+      <section className="bg-custom-gradient rounded-[100px] h-20 flex items-center justify-between px-6 mb-10 md:mb-15 lg:mb-20 font-regular-16">
         <a
           href="https://drive.google.com/file/d/1PzA30Nk7wqVgQpLwaYO5vCiYvMqs4Dhs/view?usp=sharing"
           target="_blank"
@@ -37,7 +37,7 @@ export default function Header() {
 
         {/* Burger Icon */}
         <button
-          className="md:hidden text-white z-50"
+          className="md:hidden  z-50"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <X size={32} /> : <Menu size={32} />}
@@ -47,7 +47,7 @@ export default function Header() {
       {/* Mobile Menu Overlay */}
       {menuOpen && (
         <div className="fixed inset-0 bg-opacity-60 backdrop-blur-md flex justify-center items-center transition-all duration-300">
-          <nav className="flex flex-col space-y-6 text-white text-2xl text-center">
+          <nav className="flex flex-col space-y-6 text-center">
             {["home", "about", "projects", "contacts"].map((id) => (
               <a
                 key={id}

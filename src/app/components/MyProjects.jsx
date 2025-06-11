@@ -46,7 +46,7 @@ const projects = [
 export default function MyProjects() {
   return (
     <section className="mb-10" id="projects">
-      <h3 className="text-white mb-5">My Projects</h3>
+      <h3 className="font-bold-25 mb-5">My Projects</h3>
       <div className="bg-[#1E1E1E] rounded-2xl p-5 hover:shadow-[0_0_15px_rgba(255,255,255,0.6)] transition duration-200">
         <Swiper
           modules={[Navigation, Pagination]}
@@ -63,8 +63,8 @@ export default function MyProjects() {
         >
           {projects.map((project, index) => (
             <SwiperSlide key={index}>
-              <div className="rounded-2xl bg-custom-gradient flex flex-col items-center text-white w-full p-3 hover:scale-[1.01] transition-transform">
-                <h4 className="mb-2">{project.title}</h4>
+              <div className="rounded-2xl bg-custom-gradient flex flex-col items-center w-full p-3 hover:scale-[1.01] transition-transform duration-500">
+                <h4 className="mb-2 font-bold-18">{project.title}</h4>
                 <Image
                   src={project.img}
                   alt={project.title}
@@ -83,7 +83,7 @@ export default function MyProjects() {
                     />
                   </Link>
                   <Link href={project.demo} target="_blank">
-                    <LinkIcon className="w-[25px] h-[25px] text-white hover:scale-125 transition duration-200" />
+                    <LinkIcon className="w-[25px] h-[25px] hover:scale-125 transition duration-200" />
                   </Link>
                 </div>
               </div>

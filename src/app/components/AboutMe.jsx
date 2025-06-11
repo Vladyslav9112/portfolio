@@ -1,10 +1,10 @@
 export default function AboutMe() {
   return (
     <section
-      className="bg-custom-gradient rounded-[15px] p-6 text-white mb-10 hover:shadow-[0_0_15px_rgba(255,255,255,0.6)] transition duration-200"
+      className="bg-custom-gradient rounded-[15px] p-6 mb-10 hover:shadow-[0_0_15px_rgba(255,255,255,0.6)] transition duration-200 font-regular-16"
       id="about"
     >
-      <h3 className="mb-6">About Me</h3>
+      <h3 className="mb-6 font-bold-25">About Me</h3>
       <p>
         I’m a Front-End Developer passionate about creating responsive,
         user-friendly websites with clean and well-structured code. I have solid

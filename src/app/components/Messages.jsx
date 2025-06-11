@@ -1,15 +1,18 @@
 export default function Messages() {
   return (
-    <section className=" flex justify-center items-center mb-10" id="message">
-      <div className="bg-[#1E1E1E] p-5 rounded-2xl text-white w-[620px]">
-        <h3 className="mb-15 text-center">Send me a message</h3>
+    <section
+      className=" flex justify-center items-center mb-10 font-medium-16"
+      id="message"
+    >
+      <div className="bg-[#1E1E1E] p-5 rounded-2xl w-[620px]">
+        <h3 className="mb-15 text-center font-bold-25">Send me a message</h3>
         <form
           action="https://formspree.io/f/xblygake"
           method="POST"
           className="flex flex-col gap-4"
         >
           <div className="">
-            <p>Name:</p>
+            <p className="font-medium-18">Name:</p>
             <input
               type="text"
               name="name"
@@ -17,7 +20,7 @@ export default function Messages() {
               required
               className="mb-2 bg-custom-gradient p-2 rounded w-full"
             />
-            <p>Email:</p>
+            <p className="font-medium-18">Email:</p>
             <input
               type="email"
               name="email"
@@ -26,7 +29,7 @@ export default function Messages() {
               className="mb-2 bg-custom-gradient p-2 rounded w-full"
             />
           </div>
-          <p>Message:</p>
+          <p className="font-medium-18">Message:</p>
           <textarea
             name="message"
             placeholder="Enter your message"
@@ -35,9 +38,9 @@ export default function Messages() {
           ></textarea>
           <button
             type="submit"
-            className="bg-custom-gradient rounded p-2 h-[50px] hover:shadow-[0_0_15px_rgba(255,255,255,0.6)] hover:scale-102 transition duration-200 cursor-pointer"
+            className="bg-custom-gradient rounded p-2 h-[50px] hover:shadow-[0_0_15px_rgba(255,255,255,0.6)] hover:scale-102 transition duration-200 cursor-pointer font-bold-16"
           >
-            Send me message
+            Send message
           </button>
         </form>
       </div>

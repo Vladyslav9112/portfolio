@@ -1,11 +1,62 @@
-import { Geist, Geist_Mono } from "next/font/google";
+"use client";
+
+import { useEffect } from "react";
 import "./styles/globals.css";
 import "./styles/animation.css";
+import "./styles/font.css";
 
 export default function RootLayout({ children }) {
+  useEffect(() => {
+    const container = document.querySelector(".glows-container");
+    if (!container) return;
+
+    container.innerHTML = "";
+
+    const screenWidth = window.innerWidth;
+
+    // Кількість бліків залежно від ширини
+    let numGlows = 20;
+    if (screenWidth < 640) {
+      numGlows = 5;
+    } else if (screenWidth < 768) {
+      numGlows = 7 + Math.floor(Math.random() * 4); // 7-10
+    } else if (screenWidth < 1024) {
+      numGlows = 10 + Math.floor(Math.random() * 6); // 10-15
+    }
+
+    for (let i = 0; i < numGlows; i++) {
+      const glow = document.createElement("div");
+      glow.className = "glow";
+
+      glow.style.top = `${Math.random() * 100}vh`;
+      glow.style.left = `${Math.random() * 100}vw`;
+
+      const size = 80 + Math.random() * 40;
+      glow.style.width = `${size}px`;
+      glow.style.height = `${size}px`;
+
+      const duration = 2 + Math.random() * 3; // повернута швидкість 5–10 сек
+      const delay = Math.random() * duration;
+
+      // обмеження руху, щоб не було горизонтального скролу
+      const moveX = (Math.random() - 0.5) * 40; // замість 80vw -> 40vw
+      const moveY = (Math.random() - 0.5) * 80;
+
+      glow.style.setProperty("--move-x", `${moveX}vw`);
+      glow.style.setProperty("--move-y", `${moveY}vh`);
+      glow.style.animation = `moveGlow ${duration}s ease-in-out infinite alternate`;
+      glow.style.animationDelay = `${delay}s`;
+
+      container.appendChild(glow);
+    }
+  }, []);
+
   return (
     <html lang="en">
-      <body className="bg-black text-white">{children}</body>
+      <body className="bg-black text-white relative min-h-screen overflow-x-hidden">
+        <div className="glows-container fixed top-0 left-0 w-full h-full pointer-events-none -z-10"></div>
+        {children}
+      </body>
     </html>
   );
 }

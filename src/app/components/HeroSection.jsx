@@ -6,8 +6,8 @@ export default function HeroSection() {
       <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-start mb-5 lg:mb-0 mr-5">
         <h1 className="mb-9 font-bold-30">VLAD KRYKLYVETS</h1>
         <p className="mb-20 max-w-[461px]">
-          I am from Ukraine, Poltava. I have experience in developing dynamic
-          web projects with adaptive layout.
+          I'm from Ukraine. I have experience in developing dynamic web projects
+          with adaptive layout.
         </p>
         <a
           href="#message"

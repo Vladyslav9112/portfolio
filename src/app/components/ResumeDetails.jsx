@@ -5,7 +5,7 @@ export default function ResumeDetails() {
         <h4 className="mb-2 font-bold-25">Education</h4>
         <ul className="list-disc list-inside">
           <li>
-            Kharkiv National University of Radioelectronics (KNURE) 2021–2025
+            Kharkiv National University of Radioelectronics (KhNURE) 2021–2025
           </li>
         </ul>
       </div>

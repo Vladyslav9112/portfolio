@@ -39,7 +39,7 @@ const projects = [
     title: "Sales Page",
     img: "/MyProjects/salesPage.jpg",
     github: "https://github.com/Vladyslav9112/sales-page",
-    demo: "https://vladyslav9112.github.io/calc/",
+    demo: "https://vladyslav9112.github.io/sales-page/",
   },
 ];
 

@@ -24,10 +24,10 @@ const projects = [
     demo: "https://vladyslav9112.github.io/flappy-bird/",
   },
   {
-    title: "Tour Plan",
-    img: "/MyProjects/tourPlan.jpg",
-    github: "https://github.com/Vladyslav9112/tour-plane",
-    demo: "https://vladyslav9112.github.io/tour-plane/",
+    title: "Moulton",
+    img: "/MyProjects/moulton.jpg",
+    github: "https://github.com/Vladyslav9112/moulton",
+    demo: "https://vladyslav9112.github.io/moulton/",
   },
   {
     title: "Calculator",
@@ -40,6 +40,12 @@ const projects = [
     img: "/MyProjects/salesPage.jpg",
     github: "https://github.com/Vladyslav9112/sales-page",
     demo: "https://vladyslav9112.github.io/sales-page/",
+  },
+  {
+    title: "Tour Plan",
+    img: "/MyProjects/tourPlan.jpg",
+    github: "https://github.com/Vladyslav9112/tour-plane",
+    demo: "https://vladyslav9112.github.io/tour-plane/",
   },
 ];
 

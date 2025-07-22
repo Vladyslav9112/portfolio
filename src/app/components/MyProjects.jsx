@@ -12,6 +12,12 @@ import "swiper/css/pagination";
 
 const projects = [
   {
+    title: "Auto-Help — Ticket System",
+    img: "/MyProjects/autoHelp.jpg",
+    github: "https://github.com/Vladyslav9112/auto-help.git",
+    demo: "https://auto-help-vladyslavs-projects-8d05ddc1.vercel.app/",
+  },
+  {
     title: "Bycicle",
     img: "/MyProjects/bycicle.jpg",
     github: "https://github.com/Vladyslav9112/Bycicle/",

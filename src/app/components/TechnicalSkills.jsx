@@ -15,6 +15,7 @@ export default function TechnicalSkills() {
     { name: "React", icon: "/icons/TechnicalSkills/React.svg" },
     { name: "Next.js", icon: "/icons/TechnicalSkills/NextJs.svg" },
     { name: "GraphQL", icon: "/icons/TechnicalSkills/GraphQl.svg" },
+    { name: "MySQL", icon: "/icons/TechnicalSkills/MySQL.svg" },
     { name: "Postman", icon: "/icons/TechnicalSkills/Postman.svg" },
     { name: "Docker", icon: "/icons/TechnicalSkills/Docker.svg" },
     { name: "Git", icon: "/icons/github.svg" },

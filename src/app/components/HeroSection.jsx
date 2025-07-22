@@ -5,13 +5,13 @@ export default function HeroSection() {
     <section className="flex flex-col lg:flex-row justify-between items-center mb-15 md:mb-15 lg:mb-20 font-regular-16">
       <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-start mb-5 lg:mb-0 mr-5">
         <h1 className="mb-9 font-bold-30">VLAD KRYKLYVETS</h1>
-        <p className="mb-20 max-w-[461px]">
+        <p className="mb-10 md:mb-20 max-w-[461px]">
           I am from Ukraine, Poltava. I have experience in developing dynamic
           web projects with adaptive layout.
         </p>
         <a
           href="#message"
-          className="bg-custom-gradient mb-24 w-[168px] h-[47px] border border-[rgba(217,217,217,0.13)] rounded-[5px] flex items-center justify-center animate-pulse transition duration-200"
+          className="bg-custom-gradient mb-10 md:mb-24 w-[168px] h-[47px] border border-[rgba(217,217,217,0.13)] rounded-[5px] flex items-center justify-center animate-pulse transition duration-200"
         >
           Hire Me
         </a>

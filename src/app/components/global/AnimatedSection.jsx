@@ -1,55 +1,27 @@
 "use client";
+import { useEffect, useRef } from "react";
 
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
-
-const variants = {
-  left: {
-    hidden: { opacity: 0, translateX: "-50px" },
-    visible: { opacity: 1, translateX: "0px" },
-  },
-  right: {
-    hidden: { opacity: 0, translateX: "50px" },
-    visible: { opacity: 1, translateX: "0px" },
-  },
-  top: {
-    hidden: { opacity: 0, translateY: "-50px" },
-    visible: { opacity: 1, translateY: "0px" },
-  },
-  bottom: {
-    hidden: { opacity: 0, translateY: "50px" },
-    visible: { opacity: 1, translateY: "0px" },
-  },
-  fade: {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  },
+const dirMap = {
+  top:    "translate-y-[-40px] opacity-0",
+  bottom: "translate-y-[40px] opacity-0",
+  left:   "translate-x-[-40px] opacity-0",
+  right:  "translate-x-[40px] opacity-0",
 };
 
-export default function AnimatedSection({
-  children,
-  direction = "left",
-  delay = 0,
-}) {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
-
+export default function AnimatedSection({ children, direction = "bottom" }) {
+  const ref = useRef(null);
   useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
-
-  return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={variants[direction]}
-      transition={{ duration: 0.7, delay }}
-    >
-      {children}
-    </motion.div>
-  );
+    const el = ref.current;
+    if (!el) return;
+    el.classList.add(...dirMap[direction].split(" "), "transition-all", "duration-700");
+    const obs = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        el.classList.remove(...dirMap[direction].split(" "));
+        obs.disconnect();
+      }
+    }, { threshold: 0.12 });
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [direction]);
+  return <div ref={ref}>{children}</div>;
 }

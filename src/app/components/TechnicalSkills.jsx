@@ -1,67 +1,38 @@
-"use client";
-
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
 
+const skills = [
+  { name: "React", icon: "/icons/TechnicalSkills/React.svg", level: 95 },
+  { name: "Next.js", icon: "/icons/TechnicalSkills/Next.js.svg", level: 92 },
+  { name: "TypeScript", icon: "/icons/TechnicalSkills/TypeScript.svg", level: 85 },
+  { name: "Node.js", icon: "/icons/TechnicalSkills/Node.js.svg", level: 88 },
+  { name: "PostgreSQL", icon: "/icons/TechnicalSkills/PostgreSQL.svg", level: 80 },
+  { name: "MongoDB", icon: "/icons/TechnicalSkills/MongoDB.svg", level: 78 },
+  { name: "Docker", icon: "/icons/TechnicalSkills/Docker.svg", level: 72 },
+  { name: "Tailwind", icon: "/icons/TechnicalSkills/Tailwind CSS.svg", level: 95 },
+];
+
 export default function TechnicalSkills() {
-  const skills = [
-    { name: "HTML", icon: "/icons/TechnicalSkills/HTML.svg" },
-    { name: "CSS", icon: "/icons/TechnicalSkills/CSS.svg" },
-    { name: "SCSS", icon: "/icons/TechnicalSkills/SASS.svg" },
-    { name: "Tailwind", icon: "/icons/TechnicalSkills/Tailwind.svg" },
-    { name: "JavaScript", icon: "/icons/TechnicalSkills/JavaScript.svg" },
-    { name: "TypeScript", icon: "/icons/TechnicalSkills/TypeScript.svg" },
-    { name: "React", icon: "/icons/TechnicalSkills/React.svg" },
-    { name: "Next.js", icon: "/icons/TechnicalSkills/NextJs.svg" },
-    { name: "GraphQL", icon: "/icons/TechnicalSkills/GraphQl.svg" },
-    { name: "MySQL", icon: "/icons/TechnicalSkills/MySQL.svg" },
-    { name: "Postman", icon: "/icons/TechnicalSkills/Postman.svg" },
-    { name: "Docker", icon: "/icons/TechnicalSkills/Docker.svg" },
-    { name: "Git", icon: "/icons/github.svg" },
-    { name: "Vite", icon: "/icons/TechnicalSkills/Vite.svg" },
-    { name: "Figma", icon: "/icons/TechnicalSkills/Figma.svg" },
-  ];
-
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-  useEffect(() => {
-    function handleResize() {
-      setIsSmallScreen(window.innerWidth < 640);
-    }
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
-    <section>
-      <h3 className="mb-5 font-bold-25">Technical Skills</h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-6 mb-10">
-        {skills.map((skill, i) => {
-          const delay = isSmallScreen ? i * 0.02 : i * 0.05;
-          const duration = isSmallScreen ? 0.25 : 0.4;
-
-          return (
-            <motion.div
-              key={skill.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay, duration }}
-              viewport={{ once: true, amount: 0.2 }}
-              className="w-full h-[162px] bg-[#1E1E1E] rounded-2xl shadow-md flex flex-col items-center justify-center transition-transform duration-200 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,255,255,0.6)]"
-            >
-              <Image
-                src={skill.icon}
-                alt={skill.name}
-                width={62}
-                height={62}
-                className="mb-2 object-cover"
-              />
-              <p className="font-bold-18">{skill.name}</p>
-            </motion.div>
-          );
-        })}
+    <section id="skills" className="py-24">
+      <p className="text-xs font-bold tracking-[0.15em] uppercase mb-3" style={{ color: "#00ff9c" }}>Technical Skills</p>
+      <h2 className="text-4xl font-black mb-12">
+        Tech <span style={{ color: "#00ff9c" }}>Stack</span>
+      </h2>
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        {skills.map(s => (
+          <div key={s.name}
+            className="p-4 rounded-2xl text-center transition-all duration-300 hover:border-white/20"
+            style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}>
+            <div className="w-12 h-12 mx-auto mb-3 relative">
+              <Image src={s.icon} alt={s.name} fill className="object-contain" />
+            </div>
+            <p className="text-sm font-semibold text-white mb-2">{s.name}</p>
+            <div className="h-1 rounded-full w-full" style={{ background: "rgba(255,255,255,0.1)" }}>
+              <div className="h-1 rounded-full transition-all duration-700"
+                style={{ width: s.level + "%", background: "linear-gradient(90deg, #00ff9c, #4fd1c5)" }} />
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

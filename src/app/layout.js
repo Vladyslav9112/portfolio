@@ -1,14 +1,15 @@
 import "./styles/globals.css";
 import "./styles/animation.css";
 import "./styles/font.css";
-import ClientLayout from "./ClientLoyout"; // 👈 Імпорт клієнтської оболонки
+import ClientLayout from "./ClientLoyout";
+
 export const metadata = {
   title: "PORTFOLIO: Vlad Kryklyvets",
   description:
-    "Vlad Kryklyvets - Front-End Developer from Ukraine. Portfolio with projects, skills, and contact info.",
+    "Vlad Kryklyvets - Full Stack Developer from Ukraine. Portfolio with projects, skills, and contact info.",
   keywords: [
     "Vlad Kryklyvets",
-    "Front-End Developer",
+    "Full Stack Developer",
     "portfolio",
     "React",
     "Next.js",
@@ -21,13 +22,10 @@ export const metadata = {
   ],
   creator: "Vlad Kryklyvets",
   robots: "index, follow",
-  icons: {
-    icon: "/icons/favicon.ico",
-  },
+  icons: { icon: "/icons/favicon.ico" },
   openGraph: {
     title: "PORTFOLIO: Vlad Kryklyvets",
-    description:
-      "Vlad Kryklyvets - Front-End Developer from Ukraine. Portfolio with projects, skills, and contact info.",
+    description: "Vlad Kryklyvets - Full Stack Developer from Ukraine.",
     url: "https://portfolio-omega-gilt-20.vercel.app",
     siteName: "Vlad Kryklyvets Portfolio",
     images: [
@@ -42,8 +40,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "PORTFOLIO: Vlad Kryklyvets",
-    description:
-      "Vlad Kryklyvets - Front-End Developer from Ukraine. Portfolio with projects, skills, and contact info.",
+    description: "Vlad Kryklyvets - Full Stack Developer from Ukraine.",
     images: ["https://i.postimg.cc/3NbpH7Jm/Screenshot-2.jpg"],
   },
 };
@@ -51,7 +48,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-black text-white relative min-h-screen overflow-x-hidden ">
+      <body
+        className="relative min-h-screen overflow-x-hidden"
+        style={{ background: "#0B0F1A", color: "#e2e8f0" }}
+      >
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>

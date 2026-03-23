@@ -1,56 +1,29 @@
-import Image from "next/image";
 import Header from "./components/Header";
-import ContentWrapper from "./components/global/ContentWrapper";
 import HeroSection from "./components/HeroSection";
 import AboutMe from "./components/AboutMe";
-import ResumeDetails from "./components/ResumeDetails";
-import Experience from "./components/Experience";
-import TechnicalSkills from "./components/TechnicalSkills";
-import Freelance from "./components/Freelance";
 import MyProjects from "./components/MyProjects";
-import Messages from "./components/Messages";
+import Services from "./components/Services";
+import PriceCalculator from "./components/PriceCalculator";
 import Contacts from "./components/Contacts";
 import Footer from "./components/Footer";
-import AnimatedSection from "./components/global/AnimatedSection";
+import ContentWrapper from "./components/global/ContentWrapper";
+import { QuoteProvider } from "./context/QuoteContext";
 
 export default function Home() {
   return (
-    <>
-      <ContentWrapper>
-        <AnimatedSection direction="top">
-          <Header />
-        </AnimatedSection>
-        <AnimatedSection direction="left">
-          <HeroSection />
-        </AnimatedSection>
-        <AnimatedSection direction="right">
+    <ContentWrapper>
+      <Header />
+      <HeroSection />
+      <QuoteProvider>
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
           <AboutMe />
-        </AnimatedSection>
-        <AnimatedSection direction="bottom">
-          <ResumeDetails />
-        </AnimatedSection>
-        <AnimatedSection direction="left">
-          <Experience />
-        </AnimatedSection>
-        <AnimatedSection direction="right">
-          <Freelance />
-        </AnimatedSection>
-        <AnimatedSection direction="bottom">
-          <TechnicalSkills />
-        </AnimatedSection>
-        <AnimatedSection direction="left">
           <MyProjects />
-        </AnimatedSection>
-        <AnimatedSection direction="right">
-          <Messages />
-        </AnimatedSection>
-        <AnimatedSection direction="top">
+          <Services />
+          <PriceCalculator />
           <Contacts />
-        </AnimatedSection>
-        <AnimatedSection direction="bottom">
           <Footer />
-        </AnimatedSection>
-      </ContentWrapper>
-    </>
+        </div>
+      </QuoteProvider>
+    </ContentWrapper>
   );
 }

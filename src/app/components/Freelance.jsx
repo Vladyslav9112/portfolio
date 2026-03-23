@@ -1,53 +1,27 @@
+const services = [
+  { icon: "🌐", title: "Web Applications", desc: "Full-featured apps built with Next.js, React, and Node.js. From MVPs to production-ready SaaS products." },
+  { icon: "🤖", title: "Telegram Mini Apps", desc: "Custom Telegram bots and Mini Apps deeply integrated with the Telegram ecosystem and Web App API." },
+  { icon: "🏢", title: "Corporate Websites", desc: "Modern, fast, SEO-optimized corporate websites with multi-language support and CMS integration." },
+  { icon: "☁️", title: "Backend & APIs", desc: "RESTful APIs, microservices, database design, and cloud deployments on AWS / VPS." },
+];
+
 export default function Freelance() {
   return (
-    <section className=" h-auto p-5  bg-custom-gradient rounded-[15px] mb-10 hover:shadow-[0_0_15px_rgba(255,255,255,0.6)] transition duration-200 font-regular-16">
-      <h4 className="mb-8 font-bold-25 text-center">
-        Freelance Front-End Developer
-      </h4>
-      <div className="md:flex md:justify-between">
-        <div className="md:w-1/2 md:pr-4 mb-8 md:mb-0">
-          <h4 className="font-bold-20 mb-2">Sales Page</h4>
-          <ul className="list-disc pl-5 space-y-1 mb-3">
-            <li>
-              Developed a fully responsive landing page layout using HTML and
-              SCSS
-            </li>
-            <li>
-              Implemented mobile-first design using variables, mixins and BEM
-            </li>
-            <li>Added animations and JavaScript validation for all forms</li>
-            <li>Integrated forms with CRM system using PHP</li>
-            <li>Optimized site performance and improved load time</li>
-          </ul>
-          <p className="italic mt-2">
-            Tech stack: HTML, SCSS, JavaScript, PHP, CRM integration
-          </p>
-        </div>
-        <div className="md:w-1/2 md:pr-4">
-          <h4 className="font-bold-20 mb-2">Auto-Help — Ticket System</h4>
-          <ul className="list-disc pl-5 space-y-1 mb-3">
-            <li>
-              Developed a web app for purchasing digital stickers with automatic
-              ticket generation
-            </li>
-            <li>
-              Integrated LiqPay payment system for secure online transactions
-            </li>
-            <li>
-              Implemented automatic ticket delivery via email using Nodemailer
-            </li>
-            <li>Set up Telegram notifications through Telegram Bot API</li>
-            <li>Stored orders and payments in a MySQL database</li>
-            <li>
-              Built UI with Tailwind CSS and React hooks (useState, useEffect,
-              useRef)
-            </li>
-          </ul>
-          <p className="italic mt-2">
-            Tech stack: Next.js (App Router), MySQL, LiqPay API, Telegram Bot
-            API, Nodemailer, Tailwind CSS, React
-          </p>
-        </div>
+    <section id="services" className="py-24">
+      <p className="text-xs font-bold tracking-[0.15em] uppercase mb-3" style={{ color: "#00ff9c" }}>What I Do</p>
+      <h2 className="text-4xl font-black mb-12">
+        Freelance <span style={{ color: "#00ff9c" }}>Services</span>
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        {services.map(s => (
+          <div key={s.title}
+            className="p-6 rounded-2xl transition-all duration-300 hover:scale-[1.02] hover:border-white/20"
+            style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)" }}>
+            <div className="text-3xl mb-3">{s.icon}</div>
+            <h3 className="font-bold text-white mb-2">{s.title}</h3>
+            <p className="text-sm text-white/55 leading-relaxed">{s.desc}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
